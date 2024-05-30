@@ -1,37 +1,46 @@
-
 # MDC-RAG
 
-This project demonstrates the use of Pinecone for creating a vector embedding database and Langchain for handling language operations with OpenAI's ChatModel. The goal is to manage coursework from PDFs, create an index, and query the data efficiently.
+This project demonstrates the use of Pinecone for creating a vector embedding database and Langchain for handling language operations with OpenAI's ChatModel. The goal is to create a question answering chatbot from PDFs, create an index, and query the data efficiently.
 
 ## Setup Instructions
 
 1. **Clone the repository:**
    ```sh
-   git clone [<repository_url>](https://github.com/VirajDeshwal/mdc-RAG)
+   git clone https://github.com/VirajDeshwal/mdc-RAG
    cd mdc-RAG
    ```
 
-2. **Install the required dependencies:**
+2. **Install Anaconda:**
+   - Download and install Anaconda from [here](https://www.anaconda.com/download/success).
+
+3. **Create and activate a new conda environment:**
+   ```sh
+   conda create --name rag python=3.10
+   conda activate rag
+   ```
+
+4. **Install the required dependencies:**
    ```sh
    pip install -r requirements.txt
    ```
 
-3. **Configure environment variables:**
-   - Add your OpenAI and Pinecone API keys to .env file:
+5. **Configure environment variables:**
+   - Create a `.env` file in the root directory.
+   - Add your OpenAI and Pinecone API keys:
      ```env
      OPENAI_API_KEY=your_openai_api_key
      PINECONE_API_KEY=your_pinecone_api_key
      ```
 
-4. **Add your PDF files:**
+6. **Add your PDF files:**
    - Place the PDF files you want to process in the `input_src` folder.
 
-5. **Create the vector database and index the data:**
+7. **Create the vector database and index the data:**
    ```sh
    python run.py
    ```
 
-6. **Run a query against the indexed data:**
+8. **Run a query against the indexed data:**
    ```sh
    python pinecone_query.py
    ```
