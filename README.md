@@ -1,2 +1,5 @@
-# mdc-RAG
-Vector DB application
+# prjctcode-LLM
+LLM using Langchain
+
+
+

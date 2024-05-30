@@ -1,0 +1,7 @@
+python-dotenv
+pdfplumber
+openai
+pinecone-client
+langchain
+sentence-transformers
+pypdf
